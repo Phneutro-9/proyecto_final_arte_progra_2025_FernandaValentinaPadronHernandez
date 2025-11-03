@@ -30,18 +30,44 @@ for index, row in dfile.iterrows():
 	
 	#Si figura es "c", llamar función del círculo
 	if figura == "c":
+		#Indicar que figura es
+		print("Figura = círculo")
+
 		#Guardar perimetro y area econtradas
 		perimetro, area = circulo(medida1)
+		perimetros.append(perimetro)
+		areas.append(area)
+
+		#Imprimir perimetro y area conseguidos
+		print(f"Perimetro = {perimetro}\nArea = {area}\n")
 
 	#Si figura es "t", llamar función del triángulo
 	elif figura == "t":
+		#Indicar que figura es
+		print("Figura = triángulo")
+
 		#Guardar perimetro y area econtradas
 		perimetro, area = triangulo(medida1,medida2)
+		perimetros.append(perimetro)
+		areas.append(area)
+		
+		#Imprimir  perimetro y area conseguidos
+		print(f"Perimetro = {perimetro}\nArea = {area}\n")
 
-	#Si figura es "r", llamar función del rectangulo
+	#Si figura es "r", llamar función del rectángulo
 	elif figura == "r":
+		#Indicar que figura es
+		print("Figura = rectángulo")
+		
 		#Guardar perimetro y area econtradas
 		perimetro, area = rectangulo(medida1,medida2)
+		perimetros.append(perimetro)
+		areas.append(area)
 
+		#Imprimir  perimetro y area conseguidos
+		print(f"Perimetro = {perimetro}\nArea = {area}\n")
+
+print(perimetro,areas)
 print("¡Todas las figuras han sido procesadas con éxito!")
 print("\nFin del código.\n")
+
