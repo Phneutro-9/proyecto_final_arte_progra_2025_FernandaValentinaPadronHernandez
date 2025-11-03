@@ -7,6 +7,9 @@ from funciones import triangulo, rectangulo, circulo
 #Leer y guardar contenido del csv en la variable df
 dfile = pd.read_csv("figuras.csv")
 
+#Counter para número de figura
+counter = 0
+
 #Matriz perímetros
 perimetros = []
 
@@ -30,8 +33,11 @@ for index, row in dfile.iterrows():
 	
 	#Si figura es "c", llamar función del círculo
 	if figura == "c":
+		#Aumentar 1 para indicar número de figura
+		counter += 1
+
 		#Indicar que figura es
-		print("Figura = círculo")
+		print(f"Figura {counter} = círculo")
 
 		#Guardar perimetro y area econtradas
 		perimetro, area = circulo(medida1)
@@ -39,12 +45,15 @@ for index, row in dfile.iterrows():
 		areas.append(area)
 
 		#Imprimir perimetro y area conseguidos
-		print(f"Perimetro = {perimetro}\nArea = {area}\n")
+		print(f"Perimetro = {perimetro:.4f}\nArea = {area:.4f}\n")
 
 	#Si figura es "t", llamar función del triángulo
 	elif figura == "t":
+		#Aumentar 1 para indicar número de figura
+		counter += 1
+
 		#Indicar que figura es
-		print("Figura = triángulo")
+		print(f"Figura {counter}  = triángulo")
 
 		#Guardar perimetro y area econtradas
 		perimetro, area = triangulo(medida1,medida2)
@@ -52,12 +61,15 @@ for index, row in dfile.iterrows():
 		areas.append(area)
 		
 		#Imprimir  perimetro y area conseguidos
-		print(f"Perimetro = {perimetro}\nArea = {area}\n")
+		print(f"Perimetro = {perimetro:.4f}\nArea = {area:.4f}\n")
 
 	#Si figura es "r", llamar función del rectángulo
 	elif figura == "r":
+		#Aumentar 1 para indicar número de figura
+		counter += 1
+
 		#Indicar que figura es
-		print("Figura = rectángulo")
+		print(f"Figura {counter}  = rectángulo")
 		
 		#Guardar perimetro y area econtradas
 		perimetro, area = rectangulo(medida1,medida2)
@@ -65,9 +77,9 @@ for index, row in dfile.iterrows():
 		areas.append(area)
 
 		#Imprimir  perimetro y area conseguidos
-		print(f"Perimetro = {perimetro}\nArea = {area}\n")
+		print(f"Perimetro = {perimetro:.4f}\nArea = {area:.4f}\n")
 
-print(perimetro,areas)
+#print(perimetro,areas)
 print("¡Todas las figuras han sido procesadas con éxito!")
 print("\nFin del código.\n")
 
