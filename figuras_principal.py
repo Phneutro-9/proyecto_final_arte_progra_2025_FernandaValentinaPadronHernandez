@@ -10,6 +10,15 @@ dfile = pd.read_csv("figuras.csv")
 #Counter para número de figura
 counter = 0
 
+#Counter para número de triángulos
+tri = 0
+
+#Counter para número de rectángulos
+rec = 0
+
+#Counter para número de círculos
+cir = 0
+
 #Matriz perímetros
 perimetros = []
 
@@ -46,7 +55,10 @@ for index, row in dfile.iterrows():
 
 		#Imprimir perimetro y area conseguidos
 		print(f"Perimetro = {perimetro:.4f}\nArea = {area:.4f}\n")
-
+		
+		#Aumentar en 1 el número de círculos
+		cir += 1
+		
 	#Si figura es "t", llamar función del triángulo
 	elif figura == "t":
 		#Aumentar 1 para indicar número de figura
@@ -63,6 +75,9 @@ for index, row in dfile.iterrows():
 		#Imprimir  perimetro y area conseguidos
 		print(f"Perimetro = {perimetro:.4f}\nArea = {area:.4f}\n")
 
+		#Aumentar en 1 el número de triángulos
+		tri +=1
+
 	#Si figura es "r", llamar función del rectángulo
 	elif figura == "r":
 		#Aumentar 1 para indicar número de figura
@@ -78,8 +93,16 @@ for index, row in dfile.iterrows():
 
 		#Imprimir  perimetro y area conseguidos
 		print(f"Perimetro = {perimetro:.4f}\nArea = {area:.4f}\n")
+		
+		#Aumentar en 1 el número de rectángulos
+		rec += 1
 
 #print(perimetro,areas)
+
 print("¡Todas las figuras han sido procesadas con éxito!")
+
+#Mostrar total de triángulos, rectángulos y círculos
+print(f"Total círculos = {cir}\nTotal triángulos = {tri}\nTotal rectángulos = {rec}")
+
 print("\nFin del código.\n")
 
