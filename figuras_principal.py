@@ -7,6 +7,6 @@ df = pd.read_csv("Figuras.csv")
 #Mensaje de inicio
 print("---Procesando Figuras---")
 #Iterar cada fila de la variable con los datos de las medidas: df
-for index, row in df.interrows():
+for index, row in df.iterrows():
 	#Acceder a cada valor en cada columna de la fila
 	print(f"Fila {index}: FIGURA={row['FIGURA']}, Medida1={row['MEDIDA1']}, Medida2={row['MEDIDA']}")
