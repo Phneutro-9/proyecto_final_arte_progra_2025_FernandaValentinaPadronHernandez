@@ -6,7 +6,8 @@ import math
 #Función para el triangulo
 def triangulo(medida1,medida2):
 	#Obtener perimetro triangulo
-	perimetro = medida1 + medida2
+	perimetro = medida1 * 3 
+	#Se multiplicó la medida1 tres veces para indicar que medida1 es un lado y que el triángulo es equilatero
 
 	#Obtener area triangulo
 	area = (medida1*medida2)/2
